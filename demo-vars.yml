@@ -1,0 +1,14 @@
+- name: Demo on register
+  hosts: all
+  tasks:
+    - name: Get uptime
+      ansible.builtin.shell: uptime
+      register: SHELL_OUTPUT
+
+    - name: Print Output
+      ansible.builtin.debug:
+        msg: "{{SHELL_OUTPUT.stdout}}"
+
+    - name: Declare a variable
+      ansible.builtin.set_fact:
+        UPTIME: "{{SHELL_OUTPUT.stdout}}"
