@@ -1,14 +1,13 @@
 ---
-- name: Create empty file with 0755 permissions
-  hosts: 54.163.47.38 # replace with your actual group name
+- name: Copy calendar file
+  hosts: 54.163.47.38
   become: true
 
   tasks:
-    - name: Create file
+    - name: Copy cal.txt to myscript.sh
       ansible.builtin.copy:
         src: /tmp/cal.txt
         dest: /opt/scripts/myscript.sh
-        remote_src: yes
         mode: '0755'
         owner: root
         group: root
