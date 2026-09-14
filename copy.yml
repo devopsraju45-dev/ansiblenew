@@ -1,0 +1,13 @@
+---
+- name: Create empty file with 0755 permissions
+  hosts: 54.163.47.38 # replace with your actual group name
+  become: true
+
+  tasks:
+    - name: Create file
+      ansible.builtin.copy:
+        src: /new/myscript.sh
+        dest: /opt/scripts/myscript.sh
+        mode: '0755'
+        owner: root
+        group: root
