@@ -8,6 +8,7 @@
       ansible.builtin.copy:
         src: /new/myscript.sh
         dest: /opt/scripts/myscript.sh
+        remote_src: yes
         mode: '0755'
         owner: root
         group: root
