@@ -6,7 +6,7 @@
   tasks:
     - name: Create file
       ansible.builtin.copy:
-        src: /new/myscript.sh
+        src: /new/cal.txt
         dest: /opt/scripts/myscript.sh
         remote_src: yes
         mode: '0755'
