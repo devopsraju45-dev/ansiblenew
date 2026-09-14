@@ -1,6 +1,6 @@
 ---
 - name: Create empty file with 0755 permissions
-  # replace with your actual group name
+  Hosts: 54.163.47.38# replace with your actual group name
   become: true
 
   tasks:
