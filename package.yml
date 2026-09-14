@@ -1,0 +1,10 @@
+---
+- name: Install Apache
+  hosts: 54.163.47.38
+  become: true
+
+  tasks:
+    - name: Install httpd
+      ansible.builtin.dnf:
+        name: httpd
+        state: present
